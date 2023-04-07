@@ -3,10 +3,7 @@ import mp
 import os
 app = Flask(__name__)
 
-@app.route('/pagar?pix=<pix>', methods=['GET'])
-def pagar(pix):
-    return f"""<script>window.location = "{pix}";</script>
-"""
+
 
 @app.route('/', methods=['GET', 'POST'])
 def form():
@@ -16,7 +13,7 @@ def form():
         email = request.form['campo-email']
         pix = mp.pix(email, tipo_consulta, campo)
         # fazer algo com os dados recebidos
-        return f"""<script>window.location = "https://consultarapida.onrender.com/pagar?pix={pix}";</script>
+        return f"""<script>window.location = "{pix}";</script>
 """
     return render_template('busca.html')
 
