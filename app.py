@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 @app.route('/pagar', methods=['POST'])
-def pagar()
+def pagar():
     pix = request.form["pix"]
     return f"""<script>window.location = "{pix}";</script>
 """
