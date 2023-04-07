@@ -3,10 +3,8 @@ import mp
 import os
 app = Flask(__name__)
 
-
-
-@app.route('/', methods=['GET', 'POST'])
-def form():
+@app.route('/aqui', methods=['POST'])
+def aqui():
     if request.method == 'POST':
         tipo_consulta = request.form['campo-seletor']
         campo = request.form['campo-texto']
@@ -15,6 +13,8 @@ def form():
         # fazer algo com os dados recebidos
         return f"""<script>window.location = "{pix}";</script>
 """
+@app.route('/', methods=['GET', 'POST'])
+def form():
     return render_template('busca.html')
 
 if __name__ == "__main__":
