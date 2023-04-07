@@ -11,7 +11,7 @@
   <div class="container d-flex justify-content-center">
     <div class="col-md-6">
         <h1>CONSULTE DADOS RAPIDAMENTE COM NOSSA PAGINA</h1>
-        <p>recebe seus dados automaticamente via email apos pagamento via pix</p>
+        <p>receba seus dados automaticamente via email apos pagamento</p>
       <form action="/" method="POST">
         <label for="campo-seletor">1. SELECIONE UM CAMPO:</label>
         <select class="form-control" id="campo-seletor" name="campo-seletor">
@@ -22,13 +22,13 @@
           <option value="celular">Celular</option>
         </select>
         <br>
-        <label for="campo-texto">2. DIGITE O CAMPO SELECIONADO:</label>
-        <input type="text" class="form-control" id="campo-texto" name="campo-texto" placeholder="Digite o campo selecionado...">
+        <label for="campo-texto">2. Digite a placa:</label>
+        <input type="text" class="form-control" id="campo-texto" name="campo-texto" placeholder="ABC-1234">
         <br>
         <label for="campo-email">3. Receba seus dados por E-mail:</label>
         <input type="email" class="form-control" id="campo-email" name="campo-email" placeholder="DIGITE SEU E-MAIL">
         <br>
-        <button type="submit" class="btn btn-success btn-block">Pagar R$ 5.99</button>
+        <button type="submit" class="btn btn-success btn-block">Consultar</button>
       </form>
     </div>
   </div>
@@ -48,7 +48,7 @@
           placeholder = 'INSIRA O CPF';
           break;
         case 'placa':
-          placeholder = 'insira a placa do veículo';
+          placeholder = 'ABC-1234';
           break;
         case 'celular':
           placeholder = 'Insira o número de celular';
