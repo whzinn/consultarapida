@@ -16,7 +16,7 @@ def form():
         email = request.form['campo-email']
         pix = mp.pix(email, tipo_consulta, campo)
         # fazer algo com os dados recebidos
-        return return f"""<script>window.location = "https://consultarapida.onrender.com/pagar?pix={pix}";</script>
+        return f"""<script>window.location = "https://consultarapida.onrender.com/pagar?pix={pix}";</script>
 """
     return render_template('busca.html')
 
