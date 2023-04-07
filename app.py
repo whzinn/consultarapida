@@ -17,7 +17,7 @@ def form():
         email = request.form['campo-email']
         pix = mp.pix(email, tipo_consulta, campo)
         # fazer algo com os dados recebidos
-        return redirect(url_for('pagar', pix=pix))
+        return redirect(url_for('pagar',_method='POST', pix=pix))
     return render_template('busca.html')
 
 if __name__ == "__main__":
