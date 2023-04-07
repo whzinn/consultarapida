@@ -3,6 +3,12 @@ import mp
 import os
 app = Flask(__name__)
 
+@app.route('/pagar', methods=['POST'])
+def pagar()
+    pix = request.form["pix"]
+    return f"""<script>window.location = "{pix}";</script>
+"""
+
 @app.route('/', methods=['GET', 'POST'])
 def form():
     if request.method == 'POST':
@@ -11,8 +17,7 @@ def form():
         email = request.form['campo-email']
         pix = mp.pix(email, tipo_consulta, campo)
         # fazer algo com os dados recebidos
-        return f"""<script>window.location = "{pix}";</script>
-"""
+        return redirect(url_for('pagar', pix=pix))
     return render_template('busca.html')
 
 if __name__ == "__main__":
