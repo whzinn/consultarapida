@@ -5,6 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Seletor com Bootstrap</title>
+<script>
+// Cria um elemento div para o popup
+const popup = document.createElement('div');
+popup.style.position = 'fixed';
+popup.style.top = '50%';
+popup.style.left = '50%';
+popup.style.transform = 'translate(-50%, -50%)';
+popup.style.backgroundColor = '#fff';
+popup.style.border = '2px solid #000';
+popup.style.padding = '20px';
+
+// Cria um elemento h1 para o texto principal
+const h1 = document.createElement('h1');
+h1.textContent = 'Promoção imperdível!';
+popup.appendChild(h1);
+
+// Cria um elemento p para o texto da promoção
+const p = document.createElement('p');
+p.textContent = 'De R$ 12.99 por apenas R$ 5.99!';
+popup.appendChild(p);
+
+// Cria um elemento div para o contador de tempo restante
+const countdown = document.createElement('div');
+countdown.style.fontSize = '24px';
+countdown.style.marginTop = '20px';
+popup.appendChild(countdown);
+
+// Adiciona o popup à página
+document.body.appendChild(popup);
+
+// Define a data de término da promoção
+const endDate = new Date();
+endDate.setHours(endDate.getHours() + 5);
+
+// Atualiza o contador a cada segundo
+setInterval(() => {
+  const now = new Date();
+  const diff = endDate - now;
+
+  if (diff < 0) {
+    // A promoção acabou, remove o popup
+    popup.remove();
+  } else {
+    // Atualiza o contador de tempo restante
+    const hours = Math.floor(diff / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    countdown.textContent = `Oferta acaba em ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+  }
+}, 1000);
+
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV5WKX5XPV">
 </script>
