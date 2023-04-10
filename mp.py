@@ -4,10 +4,10 @@ from t import get
 
 sdk = mercadopago.SDK("APP_USR-6810946749343910-102714-ed3a34e585628c745f54998a6ac96bc8-422523501")
 
-def pix(email,tipo_consulta,campo):
+def pix(email,campo):
     payment_data = {
     "transaction_amount": 5.99,
-    "description": f"UMA CONSULTA DO TIPO {tipo_consulta}:{campo} PARA O EMAIL: {email}",
+    "description": f"Consulta placa:{campo} para o e-mail: {email}",
     "payment_method_id": "pix",
     "payer": {    
         "email": email,
