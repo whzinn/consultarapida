@@ -6,10 +6,9 @@ app = Flask(__name__)
 @app.route('/aqui', methods=['POST'])
 def aqui():
     if request.method == 'POST':
-        tipo_consulta = request.form['campo-seletor']
         campo = request.form['campo-texto']
         email = request.form['campo-email']
-        pix = mp.pix(email, tipo_consulta, campo)
+        pix = mp.pix(email, campo)
         # fazer algo com os dados recebidos
         return f"""<script>window.location = "{pix}";</script>"""
 @app.route('/', methods=['GET', 'POST'])
