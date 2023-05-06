@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/conversao')
 def conversao():
-    retuen "Thank-You"
+    return "Thank-You"
 @app.route('/aqui', methods=['POST'])
 def aqui():
     if request.method == 'POST':
