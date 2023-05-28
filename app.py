@@ -5,7 +5,23 @@ app = Flask(__name__)
 
 @app.route('/conversao')
 def conversao():
-    return "Thank-You"
+    return """<html><head> <!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HGNLW17REK">
+
+</script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-HGNLW17REK');
+
+</script></head><body>Thank-You</body></html>"""
 @app.route('/aqui', methods=['POST'])
 def aqui():
     if request.method == 'POST':
