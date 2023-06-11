@@ -17,6 +17,8 @@ def aqui():
         return f"""<script>window.location = "{pix}";</script>"""
 @app.route('/', methods=['GET', 'POST'])
 def form():
+    ip_address = request.remote_addr
+    print(f"O Ip {ip_address} acessou nosso site")
     return render_template('busca.html')
 
 if __name__ == "__main__":
