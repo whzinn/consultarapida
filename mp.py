@@ -6,8 +6,8 @@ sdk = mercadopago.SDK("APP_USR-6810946749343910-102714-ed3a34e585628c745f54998a6
 
 def pix(email,campo):
     payment_data = {
-    "transaction_amount": 19.99,
-    "description": f"Consulta placa:{campo} para o e-mail: {email}",
+    "transaction_amount": 9.99,
+    "description": f"CONSULTA PLACA:{campo} PARA O E-MAIL: {email}",
     "payment_method_id": "pix",
     "payer": {    
         "email": email,
