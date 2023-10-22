@@ -15,20 +15,21 @@ smtp_password = 'qnvhWOfLJYm8zydg'
 # Configuração da mensagem de email
 from_email = 'xmalesant@gmail.com'
 
-to_email = 'bwmbybr@gmail.com'
+
 subject = 'Alguém solicitou uma consulta placa'
 
 # Crie uma instância do objeto MIMEMultipart
 msg = MIMEMultipart()
 
 msg['From'] = from_email
-msg['To'] = to_email
 msg['Subject'] = subject
 
 # Adicione o corpo do email
 
 
 def send(email, placa):
+    to_email = email
+    msg['To'] = to_email
     body = f'''<!DOCTYPE html>
 <html>
 <head>
