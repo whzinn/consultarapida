@@ -43,7 +43,9 @@ def CountCliques(tipo):
         cliques[2]+=1
     if tipo == 3:
         return f"#total, checkout, dúvidas {cliques}"
-
+@app.route('/ze')
+def ze():
+    return f"Pagina Online"
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
