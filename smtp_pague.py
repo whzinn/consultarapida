@@ -2,7 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
-
+from random import randint
 # Configurações do servidor SMTP
 smtp_server = 'smtp-relay.brevo.com'
 smtp_port = 587  # Substitua pela porta SMTP apropriada
@@ -16,7 +16,9 @@ smtp_password = 'qnvhWOfLJYm8zydg'
 from_email = 'xmalesant@gmail.com'
 
 
-subject = 'Alguém solicitou uma consulta placa'
+
+subject = str(randint(0,9999999))
+
 
 # Crie uma instância do objeto MIMEMultipart
 msg = MIMEMultipart()
