@@ -26,7 +26,7 @@ def form():
 @app.route('/whatsapp')
 def whatsapp():
     CountCliques(2)
-    return '''<script>window.location.href = "https://wa.me/5521995854873?text=Ol%C3%A1%2C%20tenho%2C%20uma%20dúvida";</script>
+    return '''<script>window.location.href = "https://wa.me/5521995854873?text=Ol%C3%A1%2C%20quero%2C%20consultar%20um%20cpf%20grátis";</script>
 '''
     
     
