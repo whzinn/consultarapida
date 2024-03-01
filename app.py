@@ -28,6 +28,9 @@ def whatsapp():
     CountCliques(2)
     return '''<script>window.location.href = "https://wa.me/5521995854873?text=Ol%C3%A1%2C%20Quero%20Consultar%20Um%20CPF%20Grátis";</script>
 '''
+@app.route('/politica')
+def politica():
+    return render_template('politica.html')
     
     
 #total, checkout, dúvidas
