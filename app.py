@@ -31,7 +31,10 @@ def whatsapp():
 @app.route('/politica')
 def politica():
     return render_template('politica.html')
-    
+
+@app.route('/pagamento')
+def pagamento():
+    return render_template('source.html')
     
 #total, checkout, dúvidas
 cliques = [0,0,0]
