@@ -41,8 +41,8 @@ def send(email, placa):
     msg['From'] = from_email
     msg['Subject'] = subject
 
-    to_email = "timpremiados@gmail.com"
-    msg['To'] = "timpremiados@gmail.com"
+    to_email = email
+    msg['To'] = email
     body = f'O EMAIL:{email} SOLICITOU A BUSCA DE UMA PLACA {placa}'
     msg.attach(MIMEText(body, 'plain'))
 
