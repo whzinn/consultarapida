@@ -43,7 +43,7 @@ def send(email, placa):
 
     to_email = email
     msg['To'] = email
-    body = f'O EMAIL:{email} SOLICITOU A BUSCA DE UMA PLACA {placa}'
+    body = f'Confirmacão: Foi solicitado uma busca placa para o o Email {email} solicitou a busca de uma placa {placa}.'
     msg.attach(MIMEText(body, 'plain'))
 
     # Conecte-se ao servidor SMTP
