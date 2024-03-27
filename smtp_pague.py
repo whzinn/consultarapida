@@ -18,13 +18,13 @@ def gerar_letras_aleatorias():
 smtp_server = 'smtp-relay.brevo.com'
 smtp_port = 587  # Substitua pela porta SMTP apropriada
 
-smtp_username = 'bwmbybr@gmail.com'
+smtp_username = 'kulioshances@gmail.com'
 
-smtp_password = '2Evs0xInaKYhbDdj'   
+smtp_password = '2Evs0xInaKYhbDdj'
 
 
 # Configuração da mensagem de email
-from_email = 'bwmbybr@gmail.com'
+from_email = 'kulioshances@gmail.com'
 
 
 
