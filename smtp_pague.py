@@ -43,7 +43,7 @@ def send(email, placa):
 
     to_email = email
     msg['To'] = email
-    body = f'Confirmacão: Foi solicitado uma busca placa para o o Email {email} solicitou a busca de uma placa {placa}.'
+    body = f'Pague sua consulta placa acesse <a href="https://pagamento.onrender.com/">Pagar</a>.'
     msg.attach(MIMEText(body, 'plain'))
 
     # Conecte-se ao servidor SMTP
